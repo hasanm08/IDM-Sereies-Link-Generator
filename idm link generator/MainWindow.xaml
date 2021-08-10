@@ -1,0 +1,36 @@
+﻿<Window x:Class="idm_link_generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:idm_link_generator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="inputRegex"  HorizontalAlignment="Left" Height="32" Margin="145,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="607"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,43,0,0" TextWrapping="Wrap" Text="First Link :" VerticalAlignment="Top" Height="32" Width="108" FontSize="20"/>
+        <Button x:Name="AddSeries" Content="Add Series" HorizontalAlignment="Left" Margin="145,355,0,0" VerticalAlignment="Top" Width="106" Height="34" Visibility="Hidden" Click="AddSeries_click"/>
+        <Button x:Name="AddSession" Visibility="Hidden" Content="Add Session" HorizontalAlignment="Left" Margin="389,351,0,0" VerticalAlignment="Top" Width="110" Height="38" Click="AddSession_click"/>
+        <Button x:Name="AddEpisod" Visibility="Hidden" Content="Add Episod" HorizontalAlignment="Left" Margin="646,355,0,0" VerticalAlignment="Top" Width="106" Height="34" Click="AddEpisod_click"/>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="181" Margin="145,161,0,0" VerticalAlignment="Top" Width="607" SelectionChanged="Listbox_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="32,161,0,0" TextWrapping="Wrap" Text="Generated :" FontSize="20" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Save" x:Name="save" IsEnabled="False" HorizontalAlignment="Left" Margin="32,286,0,0" VerticalAlignment="Top" Width="89" Height="38" Click="SaveFile_click" RenderTransformOrigin="0.584,1.522"/>
+        <Button Content="Load" x:Name="load" IsEnabled="True" HorizontalAlignment="Left" Margin="32,243,0,0" VerticalAlignment="Top" Width="89" Height="38" Click="Load_Click" RenderTransformOrigin="0.584,1.522"/>
+
+        <Button Content="New" HorizontalAlignment="Left" Margin="32,200,0,0" VerticalAlignment="Top" Width="89" Height="38" Click="NewFile_click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="145,105,0,0" TextWrapping="Wrap" Text="E From" FontSize="18" VerticalAlignment="Top" RenderTransformOrigin="0.44,-0.559"/>
+        <TextBox x:Name="fomINT" HorizontalAlignment="Left" Height="20" Margin="215,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64"/>
+        <TextBlock HorizontalAlignment="Left" Margin="322,101,0,0" FontSize="18" TextWrapping="Wrap" Text="E To" VerticalAlignment="Top"/>
+        <TextBox x:Name="toINT" HorizontalAlignment="Left" Height="20" Margin="389,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="wcSize" HorizontalAlignment="Left" Height="23" Margin="632,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="490,101,0,0" FontSize="18" TextWrapping="Wrap" Text="E WildCard Size" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="145,121,0,0" TextWrapping="Wrap" Text="S From" FontSize="18" VerticalAlignment="Top" RenderTransformOrigin="0.44,-0.559"/>
+        <TextBox x:Name="SfomINT" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" Margin="215,125,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="322,125,0,0" FontSize="18" TextWrapping="Wrap" Text="S To" VerticalAlignment="Top"/>
+        <TextBox x:Name="StoINT" HorizontalAlignment="Left" Height="20" Margin="389,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="SwcSize" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="632,130,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="490,121,0,0" FontSize="18" TextWrapping="Wrap" Text="S WildCard Size" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
